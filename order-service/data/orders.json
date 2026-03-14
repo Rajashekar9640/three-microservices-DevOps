@@ -1,0 +1,39 @@
+[
+  {
+    "id": "78e6080d-6cfa-4bc2-9b46-18606d3bd1c8",
+    "userId": "7b54d47f-bd0d-4469-9246-60d320a90d4f",
+    "items": [
+      {
+        "productId": "prod-001",
+        "productName": "Laptop Pro X1",
+        "price": 1299.99,
+        "quantity": 2,
+        "lineTotal": 2599.98
+      },
+      {
+        "productId": "prod-002",
+        "productName": "Wireless Noise-Cancelling Headphones",
+        "price": 249.99,
+        "quantity": 1,
+        "lineTotal": 249.99
+      }
+    ],
+    "total": 2849.97,
+    "status": "pending",
+    "shippingAddress": {
+      "street": "123 Main St",
+      "city": "San Francisco",
+      "state": "CA",
+      "zip": "94105",
+      "country": "US"
+    },
+    "createdAt": "2026-03-14T02:48:43.879Z",
+    "updatedAt": "2026-03-14T02:48:43.879Z",
+    "statusHistory": [
+      {
+        "status": "pending",
+        "timestamp": "2026-03-14T02:48:43.879Z"
+      }
+    ]
+  }
+]

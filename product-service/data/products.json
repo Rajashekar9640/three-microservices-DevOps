@@ -1,0 +1,162 @@
+[
+  {
+    "id": "prod-001",
+    "name": "Laptop Pro X1",
+    "description": "High-performance 15-inch laptop with 16GB RAM, 512GB SSD, and Intel Core i7 processor. Perfect for developers and designers.",
+    "price": 1299.99,
+    "category": "Electronics",
+    "stock": 43,
+    "tags": [
+      "laptop",
+      "computer",
+      "professional",
+      "intel"
+    ],
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2026-03-14T02:48:43.875Z"
+  },
+  {
+    "id": "prod-002",
+    "name": "Wireless Noise-Cancelling Headphones",
+    "description": "Premium over-ear headphones with 30-hour battery life, active noise cancellation, and studio-quality audio.",
+    "price": 249.99,
+    "category": "Electronics",
+    "stock": 119,
+    "tags": [
+      "audio",
+      "wireless",
+      "headphones",
+      "noise-cancelling"
+    ],
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2026-03-14T02:48:43.878Z"
+  },
+  {
+    "id": "prod-003",
+    "name": "Ergonomic Office Chair",
+    "description": "Fully adjustable ergonomic chair with lumbar support, breathable mesh back, and armrest customization. Reduces back strain for long work sessions.",
+    "price": 459,
+    "category": "Furniture",
+    "stock": 30,
+    "tags": [
+      "chair",
+      "ergonomic",
+      "office",
+      "furniture"
+    ],
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "prod-004",
+    "name": "Mechanical Keyboard",
+    "description": "Tenkeyless mechanical keyboard with Cherry MX Blue switches, RGB backlighting, and programmable macros.",
+    "price": 129.99,
+    "category": "Electronics",
+    "stock": 75,
+    "tags": [
+      "keyboard",
+      "mechanical",
+      "rgb",
+      "gaming"
+    ],
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "prod-005",
+    "name": "Running Shoes Ultra",
+    "description": "Lightweight running shoes with responsive foam cushioning, breathable upper, and durable outsole. Available in multiple colors.",
+    "price": 119.99,
+    "category": "Sports",
+    "stock": 200,
+    "tags": [
+      "shoes",
+      "running",
+      "sports",
+      "fitness"
+    ],
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "prod-006",
+    "name": "Coffee Maker Pro",
+    "description": "Programmable 12-cup coffee maker with built-in grinder, thermal carafe, and smartphone connectivity.",
+    "price": 199.99,
+    "category": "Kitchen",
+    "stock": 60,
+    "tags": [
+      "coffee",
+      "kitchen",
+      "appliance",
+      "smart"
+    ],
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "prod-007",
+    "name": "Portable Bluetooth Speaker",
+    "description": "Waterproof portable speaker with 360-degree surround sound, 20-hour battery, and built-in microphone.",
+    "price": 89.99,
+    "category": "Electronics",
+    "stock": 150,
+    "tags": [
+      "speaker",
+      "bluetooth",
+      "portable",
+      "waterproof"
+    ],
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "prod-008",
+    "name": "Yoga Mat Premium",
+    "description": "Extra-thick non-slip yoga mat with alignment lines, carrying strap, and eco-friendly materials.",
+    "price": 59.99,
+    "category": "Sports",
+    "stock": 300,
+    "tags": [
+      "yoga",
+      "mat",
+      "fitness",
+      "eco-friendly"
+    ],
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "prod-009",
+    "name": "Standing Desk Converter",
+    "description": "Height-adjustable standing desk converter that fits on any desk surface. Supports dual monitors, keyboard, and laptop.",
+    "price": 349.99,
+    "category": "Furniture",
+    "stock": 25,
+    "tags": [
+      "desk",
+      "standing",
+      "ergonomic",
+      "office"
+    ],
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "prod-010",
+    "name": "Smart Water Bottle",
+    "description": "Temperature-tracking water bottle with hydration reminders, LED display, and app connectivity. Keeps drinks cold 24h or hot 12h.",
+    "price": 49.99,
+    "category": "Sports",
+    "stock": 180,
+    "tags": [
+      "water bottle",
+      "smart",
+      "hydration",
+      "fitness"
+    ],
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  }
+]

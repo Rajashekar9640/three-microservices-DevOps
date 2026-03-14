@@ -1,0 +1,10 @@
+[
+  {
+    "id": "7b54d47f-bd0d-4469-9246-60d320a90d4f",
+    "name": "Alice Smith",
+    "email": "alice@example.com",
+    "password": "$2a$12$7I3cw83UOZxa1Brrjx62Lu8S64sK.EBjcVO/R2v9XBhbn94lYElv.",
+    "role": "user",
+    "createdAt": "2026-03-14T02:48:42.893Z"
+  }
+]

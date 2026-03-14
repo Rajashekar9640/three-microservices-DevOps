@@ -1,0 +1,40 @@
+[
+  {
+    "id": "dda72a0a-1e9d-4f8a-92ca-2b5ce7f71781",
+    "type": "order.created",
+    "source": "unknown",
+    "payload": {
+      "orderId": "78e6080d-6cfa-4bc2-9b46-18606d3bd1c8",
+      "userId": "7b54d47f-bd0d-4469-9246-60d320a90d4f",
+      "items": [
+        {
+          "productId": "prod-001",
+          "productName": "Laptop Pro X1",
+          "price": 1299.99,
+          "quantity": 2,
+          "lineTotal": 2599.98
+        },
+        {
+          "productId": "prod-002",
+          "productName": "Wireless Noise-Cancelling Headphones",
+          "price": 249.99,
+          "quantity": 1,
+          "lineTotal": 249.99
+        }
+      ],
+      "total": 2849.97,
+      "status": "pending",
+      "createdAt": "2026-03-14T02:48:43.879Z"
+    },
+    "publishedAt": "2026-03-14T02:48:43.881Z",
+    "deliveries": [
+      {
+        "subscriberId": "21e169b9-5778-42dd-ac12-42077ca46b1d",
+        "url": "http://localhost:9999/webhook",
+        "attemptedAt": "2026-03-14T02:48:43.881Z",
+        "status": "failed",
+        "error": "connect ECONNREFUSED 127.0.0.1:9999"
+      }
+    ]
+  }
+]

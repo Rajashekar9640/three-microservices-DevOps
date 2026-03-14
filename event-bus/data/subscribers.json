@@ -1,0 +1,13 @@
+[
+  {
+    "id": "21e169b9-5778-42dd-ac12-42077ca46b1d",
+    "name": "test-monitor",
+    "callbackUrl": "http://localhost:9999/webhook",
+    "eventTypes": [
+      "order.created",
+      "order.status_updated"
+    ],
+    "createdAt": "2026-03-14T02:48:43.663Z",
+    "updatedAt": "2026-03-14T02:48:43.663Z"
+  }
+]

@@ -1,0 +1,112 @@
+version: '3.8'
+
+networks:
+  ecommerce-net:
+    driver: bridge
+
+volumes:
+  user-data:
+  product-data:
+  order-data:
+  event-data:
+
+services:
+  api-gateway:
+    build: ./api-gateway
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - USER_SERVICE_URL=http://user-service:3001
+      - PRODUCT_SERVICE_URL=http://product-service:3002
+      - ORDER_SERVICE_URL=http://order-service:3003
+      - EVENT_BUS_URL=http://event-bus:3004
+    depends_on:
+      - user-service
+      - product-service
+      - order-service
+      - event-bus
+    networks:
+      - ecommerce-net
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  user-service:
+    build: ./user-service
+    ports:
+      - "3001:3001"
+    environment:
+      - PORT=3001
+      - JWT_SECRET=super-secret-jwt-key-change-in-production
+    volumes:
+      - user-data:/app/data
+    networks:
+      - ecommerce-net
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  product-service:
+    build: ./product-service
+    ports:
+      - "3002:3002"
+    environment:
+      - PORT=3002
+    volumes:
+      - product-data:/app/data
+    networks:
+      - ecommerce-net
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3002/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  order-service:
+    build: ./order-service
+    ports:
+      - "3003:3003"
+    environment:
+      - PORT=3003
+      - USER_SERVICE_URL=http://user-service:3001
+      - PRODUCT_SERVICE_URL=http://product-service:3002
+      - EVENT_BUS_URL=http://event-bus:3004
+    volumes:
+      - order-data:/app/data
+    depends_on:
+      - user-service
+      - product-service
+      - event-bus
+    networks:
+      - ecommerce-net
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3003/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  event-bus:
+    build: ./event-bus
+    ports:
+      - "3004:3004"
+    environment:
+      - PORT=3004
+    volumes:
+      - event-data:/app/data
+    networks:
+      - ecommerce-net
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3004/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
