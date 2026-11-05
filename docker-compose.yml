@@ -1,4 +1,3 @@
-version: '3.8'
 
 networks:
   ecommerce-net:
@@ -12,7 +11,7 @@ volumes:
 
 services:
   api-gateway:
-    build: ./api-gateway
+    image: 654740195812.dkr.ecr.us-west-1.amazonaws.com/api-gateway:${IMAGE_TAG:-v1}
     ports:
       - "3000:3000"
     environment:
@@ -36,12 +35,12 @@ services:
       retries: 3
 
   user-service:
-    build: ./user-service
+    image: 654740195812.dkr.ecr.us-west-1.amazonaws.com/user-service:${IMAGE_TAG:-v1}
     ports:
       - "3001:3001"
     environment:
       - PORT=3001
-      - JWT_SECRET=super-secret-jwt-key-change-in-production
+      - "JWT_SECRET=${JWT_SECRET:?JWT_SECRET must be set}"
     volumes:
       - user-data:/app/data
     networks:
@@ -54,7 +53,7 @@ services:
       retries: 3
 
   product-service:
-    build: ./product-service
+    image: 654740195812.dkr.ecr.us-west-1.amazonaws.com/product-service:${IMAGE_TAG:-v1}
     ports:
       - "3002:3002"
     environment:
@@ -71,7 +70,7 @@ services:
       retries: 3
 
   order-service:
-    build: ./order-service
+    image: 654740195812.dkr.ecr.us-west-1.amazonaws.com/order-service:${IMAGE_TAG:-v1}
     ports:
       - "3003:3003"
     environment:
@@ -95,7 +94,7 @@ services:
       retries: 3
 
   event-bus:
-    build: ./event-bus
+    image: 654740195812.dkr.ecr.us-west-1.amazonaws.com/event-bus:${IMAGE_TAG:-v1}
     ports:
       - "3004:3004"
     environment:
