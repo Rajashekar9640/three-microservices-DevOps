@@ -7,3 +7,20 @@ dist/
 build/
 coverage/
 .nyc_output/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.plan
+tfplan
+*.tfvars
+!*.tfvars.example
+.terraform.tfstate.lock.info
+crash.log
+crash.*.log
+
+# AWS CLI installation files
+/aws/
+/awscliv2.zip

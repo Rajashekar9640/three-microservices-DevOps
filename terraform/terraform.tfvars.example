@@ -1,0 +1,12 @@
+instance_id       = "i-xxxxxxxxxxxxxxxxx"
+vpc_id            = "vpc-xxxxxxxxxxxxxxxxx"
+subnet_id         = "subnet-xxxxxxxxxxxxxxxxx"
+security_group_id = "sg-xxxxxxxxxxxxxxxxx"
+
+ecr_repository_names = [
+  "api-gateway",
+  "user-service",
+  "product-service",
+  "order-service",
+  "event-bus"
+]
