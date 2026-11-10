@@ -28,3 +28,4 @@ crash.*.log
 # Local backup and installer files
 *.backup
 *.deb
+docker-compose.yml.security-backup
