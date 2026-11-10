@@ -36,8 +36,6 @@ services:
 
   user-service:
     image: 654740195812.dkr.ecr.us-west-1.amazonaws.com/user-service:${IMAGE_TAG:-v1}
-    ports:
-      - "3001:3001"
     environment:
       - PORT=3001
       - "JWT_SECRET=${JWT_SECRET:?JWT_SECRET must be set}"
@@ -54,8 +52,6 @@ services:
 
   product-service:
     image: 654740195812.dkr.ecr.us-west-1.amazonaws.com/product-service:${IMAGE_TAG:-v1}
-    ports:
-      - "3002:3002"
     environment:
       - PORT=3002
     volumes:
@@ -71,8 +67,6 @@ services:
 
   order-service:
     image: 654740195812.dkr.ecr.us-west-1.amazonaws.com/order-service:${IMAGE_TAG:-v1}
-    ports:
-      - "3003:3003"
     environment:
       - PORT=3003
       - USER_SERVICE_URL=http://user-service:3001
@@ -95,8 +89,6 @@ services:
 
   event-bus:
     image: 654740195812.dkr.ecr.us-west-1.amazonaws.com/event-bus:${IMAGE_TAG:-v1}
-    ports:
-      - "3004:3004"
     environment:
       - PORT=3004
     volumes:

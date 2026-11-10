@@ -24,3 +24,7 @@ crash.*.log
 # AWS CLI installation files
 /aws/
 /awscliv2.zip
+
+# Local backup and installer files
+*.backup
+*.deb
